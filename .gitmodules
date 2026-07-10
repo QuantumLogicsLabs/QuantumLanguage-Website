@@ -1,8 +1,8 @@
 [submodule "backend"]
 	path = backend
-	url = https://github.com/SENODROOM/QuantumLanguage-Website-Backend.git
+	url = https://github.com/QuantumLogicsLabs/QuantumLanguage-Website-Backend.git
 	branch = main
 [submodule "frontend"]
 	path = frontend
-	url = https://github.com/SENODROOM/QuantumLanguage-Website-Frontend.git
+	url = https://github.com/QuantumLogicsLabs/QuantumLanguage-Website-Frontend.git
 	branch = main

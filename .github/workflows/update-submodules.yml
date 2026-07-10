@@ -65,8 +65,10 @@ jobs:
 
       - name: Commit and push if pointers changed
         run: |
-          # Stage only the three submodule gitlink entries.
-          git add frontend backend calculussolver
+          # Stage only submodule gitlink entries listed in .gitmodules.
+          while read -r _ path; do
+            git add "$path"
+          done < <(git config --file .gitmodules --get-regexp '^submodule\..*\.path$')
 
           if git diff --cached --quiet; then
             echo "No submodule pointer changes detected — nothing to commit."
